@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-22T23:13:15+07:00",
+    "updatedAt": "2026-10-22T23:37:32+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,43 +15,43 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-22T23:13:15+07:00",
-      "totalCostUsd": 33.324326,
-      "totalCostVnd": 861324,
+      "lastMeasuredAt": "2026-10-22T23:37:11+07:00",
+      "totalCostUsd": 36.31522,
+      "totalCostVnd": 938629,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 305,
-          "inputTokens": 38990001,
-          "cachedInputTokens": 35469312,
+          "responses": 326,
+          "inputTokens": 42050216,
+          "cachedInputTokens": 38126464,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 175603,
-          "reasoningOutputTokens": 61124,
-          "uncachedInputTokens": 3520689,
+          "outputTokens": 181354,
+          "reasoningOutputTokens": 64061,
+          "uncachedInputTokens": 3923752,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 31.782541
+          "costUsd": 34.572674
         },
         {
           "model": "gpt-6-sol",
-          "responses": 21,
-          "inputTokens": 1562654,
-          "cachedInputTokens": 912896,
+          "responses": 29,
+          "inputTokens": 2390162,
+          "cachedInputTokens": 1733632,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 5969,
-          "reasoningOutputTokens": 1222,
-          "uncachedInputTokens": 649758,
+          "outputTokens": 8276,
+          "reasoningOutputTokens": 1933,
+          "uncachedInputTokens": 656530,
           "ratesUsdPerMillionTokens": {
             "input": 2,
             "cachedInput": 0.2,
             "cacheWrite": 2.5,
             "output": 10
           },
-          "costUsd": 1.541785
+          "costUsd": 1.742546
         }
       ]
     }
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-22T23:13:15+07:00",
+      "timestamp": "2026-10-22T23:37:11+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 861324,
+      "cost": 938629,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "33.324326 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "36.315220 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -206,6 +206,21 @@
       "revenue": 0,
       "evidence": "https://algora.io/aqualinkorg/bounties?status=open",
       "note": "Các mục đã đóng bị loại; các mục còn mở có 13-84 bình luận, đã được giao, đã có nhiều bài nộp, hoặc phạm vi quá lớn. Không tạo PR trùng và không ghi doanh thu khi chưa có bằng chứng thanh toán."
+    },
+    {
+      "id": "2026-10-22-010",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-22T23:37:32+07:00",
+      "activity": "Tìm được việc chuyển các bảng Excel thành một tài liệu Word định dạng thống nhất",
+      "channel": "Freelancer.com",
+      "market": "Quốc tế; quốc gia khách hàng chưa xác định",
+      "language": "Tiếng Anh",
+      "kind": "lead",
+      "status": "Đã xác minh, sẵn sàng chào giá",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.freelancer.com/projects/microsoft-word/excel-tables-word",
+      "note": "Project ID 40781543; ngân sách 1.250-2.500 INR/giờ; còn mở 6 ngày; 5 đề xuất tại thời điểm kiểm tra. Khách hiển thị đã đặt cọc, xác minh email, điện thoại và thanh toán. Địa điểm hiển thị mâu thuẫn New Delhi/United Kingdom nên không suy đoán quốc gia."
     }
   ],
   "experiments": [
@@ -241,6 +256,19 @@
       "market": "Việt Nam",
       "language": "Tiếng Việt",
       "updatedAt": "2026-10-22T22:54:35+07:00"
+    },
+    {
+      "id": "exp-004",
+      "name": "Freelancer #40781543 - Excel Tables to Word",
+      "status": "Sẵn sàng chào giá; cần đăng nhập hoặc tạo tài khoản Freelancer",
+      "spent": 0,
+      "revenue": 0,
+      "nextAction": "Đăng nhập Freelancer và gửi chào giá 1.500 INR/giờ bằng tiếng Anh, hỏi số lượng bảng và yêu cầu về chiều rộng/kiểu tiêu đề trước khi bắt đầu.",
+      "proposedBid": "1.500 INR/giờ",
+      "proposalDraft": "Hello, I can rebuild all Excel tables into one polished Word document using native Word tables, with consistent headings, borders, spacing, page widths and page breaks, plus the supplied note or a clear placeholder beneath each table. I will verify every row and deliver an editable .docx with one revision included. I can start immediately and provide the first formatted sample within two hours. Please confirm the number of worksheets/tables and your preferred page orientation and heading style.",
+      "market": "Quốc tế; quốc gia khách hàng chưa xác định",
+      "language": "Tiếng Anh",
+      "updatedAt": "2026-10-22T23:37:32+07:00"
     }
   ]
 }
