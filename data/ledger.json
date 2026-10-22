@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T00:36:21+07:00",
+    "updatedAt": "2026-10-23T00:45:19+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,26 +15,26 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-23T00:36:05+07:00",
-      "totalCostUsd": 44.709076,
-      "totalCostVnd": 1155582,
+      "lastMeasuredAt": "2026-10-23T00:45:18+07:00",
+      "totalCostUsd": 45.656195,
+      "totalCostVnd": 1180062,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 415,
-          "inputTokens": 55427533,
-          "cachedInputTokens": 50956800,
+          "responses": 433,
+          "inputTokens": 57273129,
+          "cachedInputTokens": 52771968,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 209703,
-          "reasoningOutputTokens": 77145,
-          "uncachedInputTokens": 4470733,
+          "outputTokens": 214670,
+          "reasoningOutputTokens": 78739,
+          "uncachedInputTokens": 4501161,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 42.459712
+          "costUsd": 43.406831
         },
         {
           "model": "gpt-6-sol",
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-23T00:36:05+07:00",
+      "timestamp": "2026-10-23T00:45:18+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 1155582,
+      "cost": 1180062,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "44.709076 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "45.656195 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -251,6 +251,21 @@
       "revenue": 0,
       "evidence": "https://www.freelancer.com/projects/php/PHP-Laravel-Developer-Needed-for-40777869/details",
       "note": "Project ID 40777869; khách ở Ahmadabad, India; ngân sách yêu cầu 1.000 INR cố định, thời hạn 2 ngày; thanh toán và đặt cọc đã xác minh. Đã điền 1.000 INR/2 ngày, không chọn nâng cấp trả phí. Phí nền tảng hiển thị 250 INR nếu được nhận việc."
+    },
+    {
+      "id": "2026-10-23-003",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T00:45:19+07:00",
+      "activity": "Gửi chào giá sửa lỗi nhỏ PHP/Laravel trên Freelancer",
+      "channel": "Freelancer.com",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "bid-submitted",
+      "status": "Đã gửi thành công; chờ khách phản hồi",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.freelancer.com/projects/php/PHP-Laravel-Developer-Needed-for-40777869/proposals?bidCreated=true",
+      "note": "Freelancer xác nhận 'You've successfully placed a bid'. Mức chào 1.000 INR cố định, thời hạn 2 ngày; xếp hạng hiển thị 90/91 ngay sau khi gửi. Không mua nâng cấp trả phí; phí 250 INR chỉ phát sinh nếu được nhận việc."
     }
   ],
   "experiments": [
@@ -316,15 +331,15 @@
     {
       "id": "exp-006",
       "name": "Freelancer #40777869 - Minor PHP/Laravel Website Fixes",
-      "status": "Chào giá đã điền; chờ xác nhận gửi",
+      "status": "Đã gửi chào giá; chờ khách phản hồi",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Sau khi người dùng xác nhận, bấm Place Bid để gửi mức 1.000 INR cố định, hoàn thành trong 2 ngày; không mua nâng cấp trả phí.",
+      "nextAction": "Theo dõi tin nhắn và trạng thái trao việc; chỉ ghi doanh thu khi có bằng chứng được trao việc và thanh toán.",
       "proposedBid": "1.000 INR cố định; 2 ngày; thực nhận hiển thị 750 INR sau phí nền tảng nếu được nhận việc",
       "proposalDraft": "I can review and fix the stated Laravel issues within 2 days. I’ll start by reproducing each bug, then patch the relevant PHP/Blade, JavaScript/CSS, or MySQL code and test the affected flows for regressions. The ₹1,000 fixed budget works for the stated minor scope. Please share the bug list, Laravel/PHP versions, and repository or staging access after award. If anything falls outside the minor scope, I’ll flag it before making extra changes.",
       "market": "Ấn Độ / quốc tế",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-23T00:36:21+07:00"
+      "updatedAt": "2026-10-23T00:45:19+07:00"
     }
   ]
 }
