@@ -4,15 +4,68 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-22",
-    "dataPolicy": "Chỉ ghi số thực. Ngày không phát sinh vẫn ghi chi phí 0 và doanh thu 0."
+    "updatedAt": "2026-10-22T22:04:50+07:00",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
+    "apiAccounting": {
+      "status": "Ước tính từ token log, chưa đối soát hóa đơn",
+      "pricingBasis": "Giá API Standard, USD trên 1 triệu token",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "fxRateVndPerUsd": 25846.703734,
+      "fxSource": "https://open.er-api.com/v6/latest/USD",
+      "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
+      "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
+      "lastMeasuredAt": "2026-10-22T22:04:50+07:00",
+      "totalCostUsd": 21.637942,
+      "totalCostVnd": 559269,
+      "models": [
+        {
+          "model": "gpt-5.6-sol",
+          "responses": 246,
+          "inputTokens": 31649115,
+          "cachedInputTokens": 30144000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 146073,
+          "reasoningOutputTokens": 50488,
+          "uncachedInputTokens": 1505115,
+          "ratesUsdPerMillionTokens": {
+            "input": 4,
+            "cachedInput": 0.4,
+            "cacheWrite": 5,
+            "output": 20
+          },
+          "costUsd": 20.99952
+        },
+        {
+          "model": "gpt-6-sol",
+          "responses": 2,
+          "inputTokens": 333483,
+          "cachedInputTokens": 20480,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 832,
+          "reasoningOutputTokens": 426,
+          "uncachedInputTokens": 313003,
+          "ratesUsdPerMillionTokens": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 10
+          },
+          "costUsd": 0.638422
+        }
+      ]
+    }
   },
   "entries": [
     {
       "id": "2026-10-22-001",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:06:02+07:00",
       "activity": "Dựng web theo dõi vốn, chi phí, doanh thu và số dư",
       "channel": "Hạ tầng",
+      "market": "Không áp dụng",
+      "language": "Tiếng Việt",
+      "kind": "milestone",
       "status": "Hoàn tất",
       "cost": 0,
       "revenue": 0,
@@ -22,8 +75,12 @@
     {
       "id": "2026-10-22-002",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:06:02+07:00",
       "activity": "Xác định hướng thử nghiệm: dịch vụ dashboard dòng tiền cho hộ kinh doanh",
       "channel": "Sản phẩm",
+      "market": "Việt Nam",
+      "language": "Tiếng Việt",
+      "kind": "strategy",
       "status": "Đang chuẩn bị",
       "cost": 0,
       "revenue": 0,
@@ -33,8 +90,12 @@
     {
       "id": "2026-10-22-003",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:13:16+07:00",
       "activity": "Đóng gói và đăng bán dịch vụ dashboard dòng tiền giá 299.000đ",
       "channel": "GitHub Pages",
+      "market": "Việt Nam",
+      "language": "Tiếng Việt",
+      "kind": "sales-channel",
       "status": "Đã đăng bán",
       "cost": 0,
       "revenue": 0,
@@ -44,8 +105,12 @@
     {
       "id": "2026-10-22-004",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:16:55+07:00",
       "activity": "Đưa gói dịch vụ lên hồ sơ GitHub để tăng điểm tiếp cận miễn phí",
       "channel": "GitHub profile",
+      "market": "Quốc tế",
+      "language": "Tiếng Việt / Tiếng Anh",
+      "kind": "distribution",
       "status": "Đã công khai",
       "cost": 0,
       "revenue": 0,
@@ -55,8 +120,12 @@
     {
       "id": "2026-10-22-005",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:20:33+07:00",
       "activity": "Rà soát các coding bounty công khai để tìm nguồn thu thứ hai",
       "channel": "GitHub Issues",
+      "market": "Quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "lead-screening",
       "status": "Đã loại các cơ hội chưa đủ bằng chứng",
       "cost": 0,
       "revenue": 0,
@@ -66,8 +135,12 @@
     {
       "id": "2026-10-22-006",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:36:01+07:00",
       "activity": "Tìm được việc thiết kế Excel quản lý bán hàng, tồn kho và công nợ đang nhận chào giá",
       "channel": "vLance",
+      "market": "Việt Nam",
+      "language": "Tiếng Việt",
+      "kind": "lead",
       "status": "Đã xác minh, chuẩn bị chào giá",
       "cost": 0,
       "revenue": 0,
@@ -77,13 +150,47 @@
     {
       "id": "2026-10-22-007",
       "date": "2026-10-22",
+      "timestamp": "2026-10-22T21:42:23+07:00",
       "activity": "Hoàn thiện file Excel mẫu quản lý bán hàng, tồn kho và công nợ để chứng minh năng lực",
       "channel": "Sản phẩm mẫu",
+      "market": "Việt Nam",
+      "language": "Tiếng Việt",
+      "kind": "portfolio-asset",
       "status": "Đã công khai",
       "cost": 0,
       "revenue": 0,
       "evidence": "https://neverlove149.github.io/so-von-2-trieu/assets/mau-quan-ly-ban-hang-ton-kho.xlsx",
       "note": "File có dashboard, công thức, biểu đồ, dữ liệu kiểm thử và cảnh báo tồn kho. Chưa phát sinh đơn hàng hoặc doanh thu."
+    },
+    {
+      "id": "2026-10-22-api-001",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-22T22:04:50+07:00",
+      "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
+      "channel": "OpenAI API",
+      "market": "Không áp dụng",
+      "language": "Không áp dụng",
+      "kind": "api-cost",
+      "status": "Ước tính từ usage, chưa đối soát hóa đơn",
+      "cost": 559269,
+      "revenue": 0,
+      "evidence": "https://developers.openai.com/api/docs/pricing",
+      "note": "21.637942 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+    },
+    {
+      "id": "2026-10-22-008",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-22T22:03:10+07:00",
+      "activity": "Đổi sổ sang hạch toán chi phí API, timestamp đầy đủ và phân loại thị trường/ngôn ngữ",
+      "channel": "Quản trị sổ",
+      "market": "Không áp dụng",
+      "language": "Tiếng Việt",
+      "kind": "accounting-policy",
+      "status": "Hoàn tất",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "Mã nguồn, token log và lịch sử Git",
+      "note": "Dòng API lũy kế là dòng duy nhất mang chi phí Codex; các mốc công việc còn lại giữ chi phí 0 để không cộng trùng."
     }
   ],
   "experiments": [
@@ -94,7 +201,9 @@
       "spent": 0,
       "revenue": 0,
       "nextAction": "Theo dõi yêu cầu mới mỗi giờ; cần một kênh nhắn khách và một phương thức nhận thanh toán để chủ động chốt đơn trước 25/10.",
-      "updatedAt": "2026-10-22"
+      "market": "Việt Nam",
+      "language": "Tiếng Việt",
+      "updatedAt": "2026-10-22T21:13:16+07:00"
     },
     {
       "id": "exp-002",
@@ -103,7 +212,9 @@
       "spent": 0,
       "revenue": 0,
       "nextAction": "Chỉ nhận issue có tiền đã được cấp, tiêu chí nghiệm thu rõ và phương thức thanh toán dùng được tại Việt Nam.",
-      "updatedAt": "2026-10-22"
+      "market": "Quốc tế",
+      "language": "Tiếng Anh",
+      "updatedAt": "2026-10-22T21:20:33+07:00"
     },
     {
       "id": "exp-003",
@@ -112,7 +223,9 @@
       "spent": 0,
       "revenue": 0,
       "nextAction": "Đăng nhập vLance, gửi chào giá 1.200.000đ kèm file mẫu và cam kết bản nháp trong 48 giờ.",
-      "updatedAt": "2026-10-22"
+      "market": "Việt Nam",
+      "language": "Tiếng Việt",
+      "updatedAt": "2026-10-22T21:36:01+07:00"
     }
   ]
 }

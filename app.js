@@ -10,6 +10,17 @@ const dateFormatter = new Intl.DateTimeFormat("vi-VN", {
   year: "numeric",
 });
 
+const dateTimeFormatter = new Intl.DateTimeFormat("vi-VN", {
+  timeZone: "Asia/Ho_Chi_Minh",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: false,
+});
+
 const state = {
   data: null,
   filter: "all",
@@ -17,6 +28,8 @@ const state = {
 };
 
 const elements = {
+  apiCost: document.querySelector("#api-cost"),
+  apiCostStatus: document.querySelector("#api-cost-status"),
   balance: document.querySelector("#balance"),
   chart: document.querySelector("#balance-chart"),
   dataPolicy: document.querySelector("#data-policy"),
@@ -55,6 +68,25 @@ function formatDate(value) {
   return dateFormatter.format(new Date(year, month - 1, day));
 }
 
+function formatDateTime(value) {
+  if (!value) return "Chưa ghi thời gian";
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? formatDate(value) : dateTimeFormatter.format(date);
+}
+
+function formatChartTime(value) {
+  if (!value) return "--";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return formatDate(value);
+  return new Intl.DateTimeFormat("vi-VN", {
+    timeZone: "Asia/Ho_Chi_Minh",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(date);
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -62,6 +94,13 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function renderEvidence(value) {
+  const text = String(value ?? "");
+  if (!/^https?:\/\//i.test(text)) return escapeHtml(text);
+  const safeUrl = escapeHtml(text);
+  return `<a class="evidence-link" href="${safeUrl}" target="_blank" rel="noopener">Mở bằng chứng</a>`;
 }
 
 function calculateSummary(data) {
@@ -78,7 +117,7 @@ function calculateSummary(data) {
 function entriesWithBalance(data) {
   let runningBalance = Number(data.meta.initialCapital) || 0;
   return [...data.entries]
-    .sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id))
+    .sort((a, b) => (a.timestamp || a.date).localeCompare(b.timestamp || b.date) || a.id.localeCompare(b.id))
     .map((entry) => {
       const profit = (Number(entry.revenue) || 0) - (Number(entry.cost) || 0);
       runningBalance += profit;
@@ -92,11 +131,13 @@ function renderMetrics(data) {
   const balance = data.meta.initialCapital + profit;
 
   elements.initialCapital.textContent = money(data.meta.initialCapital);
+  elements.apiCost.textContent = money(data.meta.apiAccounting?.totalCostVnd || 0);
+  elements.apiCostStatus.textContent = data.meta.apiAccounting?.status || "Chưa có token usage";
   elements.totalCost.textContent = money(summary.cost);
   elements.totalRevenue.textContent = money(summary.revenue);
   elements.netProfit.textContent = money(profit);
   elements.balance.textContent = money(balance);
-  elements.updatedAt.textContent = formatDate(data.meta.updatedAt);
+  elements.updatedAt.textContent = formatDateTime(data.meta.updatedAt);
   elements.dataPolicy.textContent = data.meta.dataPolicy;
 
   elements.profitCard.classList.toggle("is-positive", profit > 0);
@@ -118,6 +159,7 @@ function renderExperiments(data) {
             <div><span>Đã thu</span><strong>${money(experiment.revenue)}</strong></div>
           </div>
           <p class="experiment__next"><strong>Bước tiếp:</strong> ${escapeHtml(experiment.nextAction)}</p>
+          <p class="experiment__market">${escapeHtml(experiment.market || "Chưa phân loại")} · ${escapeHtml(experiment.language || "Chưa xác định ngôn ngữ")}</p>
         </article>
       `,
     )
@@ -140,36 +182,38 @@ function renderLedger(data) {
       const profitClass = entry.profit > 0 ? "money-positive" : entry.profit < 0 ? "money-negative" : "";
       return `
         <tr>
-          <td data-label="Ngày">${formatDate(entry.date)}</td>
+          <td data-label="Mốc thời gian">${formatDateTime(entry.timestamp || entry.date)}</td>
           <td data-label="Việc đã làm">
             <span class="cell-main">${escapeHtml(entry.activity)}</span>
             <span class="cell-note">${escapeHtml(entry.note)}</span>
           </td>
-          <td data-label="Kênh">${escapeHtml(entry.channel)}</td>
+          <td data-label="Kênh / thị trường">
+            <span class="cell-main">${escapeHtml(entry.channel)}</span>
+            <span class="cell-note">${escapeHtml(entry.market || "Chưa phân loại")} · ${escapeHtml(entry.language || "Chưa xác định")}</span>
+          </td>
           <td data-label="Trạng thái"><span class="row-status${statusClass}">${escapeHtml(entry.status)}</span></td>
           <td data-label="Chi phí" class="number">${money(entry.cost)}</td>
           <td data-label="Doanh thu" class="number">${money(entry.revenue)}</td>
           <td data-label="Lãi/lỗ" class="number ${profitClass}">${money(entry.profit)}</td>
           <td data-label="Số dư" class="number"><strong>${money(entry.balance)}</strong></td>
-          <td data-label="Bằng chứng">${escapeHtml(entry.evidence)}</td>
+          <td data-label="Bằng chứng">${renderEvidence(entry.evidence)}</td>
         </tr>
       `;
     })
     .join("");
 }
 
-function dailyBalances(data) {
-  const groups = new Map();
-  entriesWithBalance(data).forEach((entry) => {
-    groups.set(entry.date, entry.balance);
-  });
-  return [...groups.entries()].map(([date, balance]) => ({ date, balance }));
+function timelineBalances(data) {
+  return entriesWithBalance(data).map((entry) => ({
+    timestamp: entry.timestamp || entry.date,
+    balance: entry.balance,
+  }));
 }
 
 function renderChart(data) {
   if (!window.Chart) return;
-  const points = dailyBalances(data);
-  const labels = points.map((point) => formatDate(point.date));
+  const points = timelineBalances(data);
+  const labels = points.map((point) => formatChartTime(point.timestamp));
   const values = points.map((point) => point.balance);
 
   if (state.chart) state.chart.destroy();

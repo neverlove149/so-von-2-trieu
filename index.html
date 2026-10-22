@@ -49,7 +49,7 @@
       <section class="page-heading" aria-labelledby="page-title">
         <div>
           <p class="eyebrow">NHẬT KÝ THỰC CHIẾN</p>
-          <h1 id="page-title">Dòng tiền thực, cập nhật theo ngày</h1>
+          <h1 id="page-title">Dòng tiền thực, cập nhật theo từng mốc</h1>
         </div>
         <div class="as-of">
           <span>Cập nhật gần nhất</span>
@@ -62,8 +62,13 @@
           <div class="metric__label"><i data-lucide="wallet-cards" aria-hidden="true"></i>Vốn ban đầu</div>
           <strong id="initial-capital">0 đ</strong>
         </article>
+        <article class="metric metric--api">
+          <div class="metric__label"><i data-lucide="cpu" aria-hidden="true"></i>Chi API Codex</div>
+          <strong id="api-cost">0 đ</strong>
+          <span class="metric__meta" id="api-cost-status">Chưa đo</span>
+        </article>
         <article class="metric">
-          <div class="metric__label"><i data-lucide="arrow-down-to-line" aria-hidden="true"></i>Tổng chi</div>
+          <div class="metric__label"><i data-lucide="arrow-down-to-line" aria-hidden="true"></i>Tổng chi lũy kế</div>
           <strong id="total-cost">0 đ</strong>
         </article>
         <article class="metric">
@@ -85,12 +90,12 @@
           <div class="panel__header">
             <div>
               <p class="section-kicker">DÒNG TIỀN</p>
-              <h2 id="chart-title">Số dư theo ngày</h2>
+              <h2 id="chart-title">Số dư theo từng mốc</h2>
             </div>
             <span class="unit-label">VND</span>
           </div>
           <div class="chart-wrap">
-            <canvas id="balance-chart" aria-label="Biểu đồ số dư theo ngày" role="img"></canvas>
+            <canvas id="balance-chart" aria-label="Biểu đồ số dư theo từng mốc thời gian" role="img"></canvas>
           </div>
         </article>
 
@@ -123,9 +128,9 @@
           <table>
             <thead>
               <tr>
-                <th>Ngày</th>
+                <th>Mốc thời gian</th>
                 <th>Việc đã làm</th>
-                <th>Kênh</th>
+                <th>Kênh / thị trường</th>
                 <th>Trạng thái</th>
                 <th class="number">Chi phí</th>
                 <th class="number">Doanh thu</th>

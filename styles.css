@@ -254,7 +254,7 @@ h2 {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   overflow: hidden;
   margin-bottom: 18px;
   border: 1px solid var(--line);
@@ -297,8 +297,20 @@ h2 {
   box-shadow: inset 0 3px 0 var(--blue);
 }
 
+.metric--api {
+  box-shadow: inset 0 3px 0 var(--amber);
+}
+
 .metric--balance {
   box-shadow: inset 0 3px 0 var(--green);
+}
+
+.metric__meta {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
 }
 
 .metric.is-positive strong {
@@ -438,6 +450,13 @@ h2 {
   font-size: 13px;
 }
 
+.experiment__market {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
 .ledger {
   overflow: hidden;
 }
@@ -511,7 +530,7 @@ td {
 
 th:nth-child(1),
 td:nth-child(1) {
-  width: 108px;
+  width: 154px;
 }
 
 th:nth-child(2),
@@ -523,7 +542,7 @@ th:nth-child(3),
 td:nth-child(3),
 th:nth-child(4),
 td:nth-child(4) {
-  width: 110px;
+  width: 142px;
 }
 
 th:nth-child(5),
@@ -570,6 +589,12 @@ tbody tr:hover {
   margin-top: 4px;
   color: var(--muted);
   font-size: 12px;
+}
+
+.evidence-link {
+  color: var(--green-deep);
+  font-weight: 600;
+  text-underline-offset: 3px;
 }
 
 .money-positive {
@@ -710,7 +735,7 @@ tbody tr:hover {
   }
 
   .metric:last-child {
-    grid-column: 1 / -1;
+    grid-column: auto;
     border-right: 0;
   }
 
