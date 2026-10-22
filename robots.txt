@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neverlove149.github.io/so-von-2-trieu/sitemap.xml
