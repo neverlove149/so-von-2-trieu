@@ -1040,6 +1040,61 @@ tbody tr:hover {
   font-size: 14px;
 }
 
+.excel-sample {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+  align-items: center;
+  gap: 42px;
+}
+
+.excel-sample__media {
+  overflow: hidden;
+  border: 1px solid #cbd8d1;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(24, 48, 37, 0.12);
+}
+
+.excel-sample__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.excel-sample__copy h2 {
+  margin: 8px 0 0;
+  font-size: 30px;
+}
+
+.excel-sample__copy > p:not(.section-kicker) {
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.excel-sample__list {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.excel-sample__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #435149;
+  font-size: 14px;
+}
+
+.excel-sample__list svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  margin-top: 2px;
+  color: var(--green);
+}
+
 .scope-table {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -1132,6 +1187,11 @@ tbody tr:hover {
 
   .deliverable:last-child {
     border-bottom: 0;
+  }
+
+  .excel-sample {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 

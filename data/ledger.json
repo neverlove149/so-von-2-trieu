@@ -62,6 +62,28 @@
       "revenue": 0,
       "evidence": "https://github.com/amiller/bounty-arcade/issues/1",
       "note": "Issue mẫu ghi rõ chưa được cấp vốn; các kết quả khác là test hoặc trả token chưa xác minh. Không nhận việc khi chưa có cam kết trả tiền rõ ràng."
+    },
+    {
+      "id": "2026-10-22-006",
+      "date": "2026-10-22",
+      "activity": "Tìm được việc thiết kế Excel quản lý bán hàng, tồn kho và công nợ đang nhận chào giá",
+      "channel": "vLance",
+      "status": "Đã xác minh, chuẩn bị chào giá",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.vlance.vn/viec-freelance/thiet-ke-excel-1",
+      "note": "Ngân sách công khai 500.000-5.000.000đ, hạn nhận chào giá còn hơn 2 ngày. Chưa gửi chào giá vì tài khoản vLance chưa đăng nhập."
+    },
+    {
+      "id": "2026-10-22-007",
+      "date": "2026-10-22",
+      "activity": "Hoàn thiện file Excel mẫu quản lý bán hàng, tồn kho và công nợ để chứng minh năng lực",
+      "channel": "Sản phẩm mẫu",
+      "status": "Đã công khai",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://neverlove149.github.io/so-von-2-trieu/assets/mau-quan-ly-ban-hang-ton-kho.xlsx",
+      "note": "File có dashboard, công thức, biểu đồ, dữ liệu kiểm thử và cảnh báo tồn kho. Chưa phát sinh đơn hàng hoặc doanh thu."
     }
   ],
   "experiments": [
@@ -81,6 +103,15 @@
       "spent": 0,
       "revenue": 0,
       "nextAction": "Chỉ nhận issue có tiền đã được cấp, tiêu chí nghiệm thu rõ và phương thức thanh toán dùng được tại Việt Nam.",
+      "updatedAt": "2026-10-22"
+    },
+    {
+      "id": "exp-003",
+      "name": "vLance #94649 - Excel bán hàng, tồn kho và công nợ",
+      "status": "Sẵn sàng chào giá",
+      "spent": 0,
+      "revenue": 0,
+      "nextAction": "Đăng nhập vLance, gửi chào giá 1.200.000đ kèm file mẫu và cam kết bản nháp trong 48 giờ.",
       "updatedAt": "2026-10-22"
     }
   ]
