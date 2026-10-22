@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-22T23:37:32+07:00",
+    "updatedAt": "2026-10-23T00:07:39+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,26 +15,26 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-22T23:37:11+07:00",
-      "totalCostUsd": 36.31522,
-      "totalCostVnd": 938629,
+      "lastMeasuredAt": "2026-10-23T00:07:19+07:00",
+      "totalCostUsd": 40.420723,
+      "totalCostVnd": 1044742,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 326,
-          "inputTokens": 42050216,
-          "cachedInputTokens": 38126464,
+          "responses": 367,
+          "inputTokens": 48098709,
+          "cachedInputTokens": 43782272,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 181354,
-          "reasoningOutputTokens": 64061,
-          "uncachedInputTokens": 3923752,
+          "outputTokens": 194976,
+          "reasoningOutputTokens": 70547,
+          "uncachedInputTokens": 4316437,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 34.572674
+          "costUsd": 38.678177
         },
         {
           "model": "gpt-6-sol",
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-22T23:37:11+07:00",
+      "timestamp": "2026-10-23T00:07:19+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 938629,
+      "cost": 1044742,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "36.315220 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "40.420723 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -221,6 +221,21 @@
       "revenue": 0,
       "evidence": "https://www.freelancer.com/projects/microsoft-word/excel-tables-word",
       "note": "Project ID 40781543; ngân sách 1.250-2.500 INR/giờ; còn mở 6 ngày; 5 đề xuất tại thời điểm kiểm tra. Khách hiển thị đã đặt cọc, xác minh email, điện thoại và thanh toán. Địa điểm hiển thị mâu thuẫn New Delhi/United Kingdom nên không suy đoán quốc gia."
+    },
+    {
+      "id": "2026-10-23-001",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T00:07:39+07:00",
+      "activity": "Đăng nhập Freelancer và sàng lọc lead phát triển website doanh nghiệp responsive không yêu cầu đặt cọc",
+      "channel": "Freelancer.com",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "lead",
+      "status": "Đã xác minh; đang hoàn tất hồ sơ trước khi chào giá",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.freelancer.com/projects/graphic-design/Modern-Responsive-Business-Website-40781581/details",
+      "note": "Project ID 40781581; khách ở New Delhi, India; ngân sách 750-1.250 INR/giờ; thanh toán và đặt cọc đã xác minh. Đã chọn sẵn Website Design, HTML, React.js và Web Development nhưng chưa bấm Next để lưu hồ sơ."
     }
   ],
   "experiments": [
@@ -260,15 +275,28 @@
     {
       "id": "exp-004",
       "name": "Freelancer #40781543 - Excel Tables to Word",
-      "status": "Sẵn sàng chào giá; cần đăng nhập hoặc tạo tài khoản Freelancer",
+      "status": "Đã đăng nhập nhưng lead bị khóa bởi yêu cầu số dư tối thiểu 20 USD",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Đăng nhập Freelancer và gửi chào giá 1.500 INR/giờ bằng tiếng Anh, hỏi số lượng bảng và yêu cầu về chiều rộng/kiểu tiêu đề trước khi bắt đầu.",
+      "nextAction": "Không nạp tiền nếu chưa được người dùng cho phép cụ thể; ưu tiên lead không yêu cầu đặt cọc.",
       "proposedBid": "1.500 INR/giờ",
       "proposalDraft": "Hello, I can rebuild all Excel tables into one polished Word document using native Word tables, with consistent headings, borders, spacing, page widths and page breaks, plus the supplied note or a clear placeholder beneath each table. I will verify every row and deliver an editable .docx with one revision included. I can start immediately and provide the first formatted sample within two hours. Please confirm the number of worksheets/tables and your preferred page orientation and heading style.",
       "market": "Quốc tế; quốc gia khách hàng chưa xác định",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-22T23:37:32+07:00"
+      "updatedAt": "2026-10-23T00:07:39+07:00"
+    },
+    {
+      "id": "exp-005",
+      "name": "Freelancer #40781581 - Modern Responsive Business Website Development",
+      "status": "Lead phù hợp, không yêu cầu đặt cọc; đang chờ lưu kỹ năng và hoàn tất hồ sơ",
+      "spent": 0,
+      "revenue": 0,
+      "nextAction": "Lưu bốn kỹ năng đã chọn, xác minh email/cập nhật hồ sơ theo luồng nền tảng, sau đó gửi chào giá 900 INR/giờ bằng tiếng Anh.",
+      "proposedBid": "900 INR/giờ",
+      "proposalDraft": "Hello, I can build your responsive business website with React and a maintainable backend or CMS, covering Home, About, Services, Gallery, Testimonials, Contact with Google Maps, basic SEO, performance and security hardening, deployment, handover documentation, and two weeks of post-launch support. I’ll start with responsive mockups for approval, then deliver staged builds you can review. My proposed rate is ₹900/hour. Before I estimate total hours, please share your logo, preferred references, service copy, photos, domain and hosting status, and whether you require Java/Spring Boot specifically or are open to a leaner stack.",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "updatedAt": "2026-10-23T00:07:39+07:00"
     }
   ]
 }
