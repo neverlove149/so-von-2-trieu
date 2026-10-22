@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T01:09:45+07:00",
+    "updatedAt": "2026-10-23T01:24:00+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,26 +15,26 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-23T01:09:35+07:00",
-      "totalCostUsd": 47.617947,
-      "totalCostVnd": 1230767,
+      "lastMeasuredAt": "2026-10-23T01:23:59+07:00",
+      "totalCostUsd": 48.893085,
+      "totalCostVnd": 1263725,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 462,
-          "inputTokens": 61245079,
-          "cachedInputTokens": 56686848,
+          "responses": 477,
+          "inputTokens": 63984066,
+          "cachedInputTokens": 59398784,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 223046,
-          "reasoningOutputTokens": 81979,
-          "uncachedInputTokens": 4558231,
+          "outputTokens": 227154,
+          "reasoningOutputTokens": 83284,
+          "uncachedInputTokens": 4585282,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 45.368583
+          "costUsd": 46.643722
         },
         {
           "model": "gpt-6-sol",
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-23T01:09:35+07:00",
+      "timestamp": "2026-10-23T01:23:59+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 1230767,
+      "cost": 1263725,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "47.617947 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "48.893085 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -281,6 +281,21 @@
       "revenue": 0,
       "evidence": "https://www.freelancer.com/projects/php/Zoho-Sites-Migration-Expert-Needed/details",
       "note": "Project ID 40781391; khách ở Mumbai, India; ngân sách 1.500-12.500 INR; 54 đề xuất tại thời điểm kiểm tra. Khách đã xác minh danh tính, thanh toán, đặt cọc, email và điện thoại. Đã điền 6.000 INR/4 ngày, không chọn nâng cấp trả phí; phí nền tảng 600 INR chỉ phát sinh nếu được nhận việc."
+    },
+    {
+      "id": "2026-10-23-005",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T01:24:00+07:00",
+      "activity": "Gửi chào giá chuyển website sang Zoho Sites trên Freelancer",
+      "channel": "Freelancer.com",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "bid-submitted",
+      "status": "Đã gửi thành công; chờ khách phản hồi",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.freelancer.com/projects/php/Zoho-Sites-Migration-Expert-Needed/proposals?bidCreated=true",
+      "note": "Freelancer xác nhận 'You've successfully placed a bid'. Mức chào 6.000 INR cố định, thời hạn 4 ngày; xếp hạng hiển thị 54/55 ngay sau khi gửi. Không mua nâng cấp trả phí; phí 600 INR chỉ phát sinh nếu được nhận việc."
     }
   ],
   "experiments": [
@@ -359,15 +374,15 @@
     {
       "id": "exp-007",
       "name": "Freelancer #40781391 - Zoho Sites Migration",
-      "status": "Chào giá đã điền; chờ xác nhận gửi",
+      "status": "Đã gửi chào giá; chờ khách phản hồi",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Sau khi người dùng xác nhận, bấm Place Bid để gửi mức 6.000 INR cố định, hoàn thành trong 4 ngày; không mua nâng cấp trả phí.",
+      "nextAction": "Theo dõi tin nhắn và trạng thái trao việc; chỉ ghi doanh thu khi có bằng chứng được trao việc và thanh toán.",
       "proposedBid": "6.000 INR cố định; 4 ngày; thực nhận hiển thị 5.400 INR sau phí nền tảng nếu được nhận việc",
       "proposalDraft": "I can migrate your existing HTML, CSS, and JavaScript site into Zoho Sites while preserving the current layout, responsive behavior, and interactions wherever Zoho supports them. I’ll first audit the existing pages and flag any sections that need a Zoho-native adaptation, then rebuild and test each page across desktop and mobile. I’ll also provide a concise handover note so you can update content afterward. My bid is ₹6,000 with delivery in 4 days. Please share the current live URL or source ZIP, the number of pages and forms, and any third-party scripts that must remain active.",
       "market": "Ấn Độ / quốc tế",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-23T01:09:45+07:00"
+      "updatedAt": "2026-10-23T01:24:00+07:00"
     }
   ]
 }
