@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T00:11:50+07:00",
+    "updatedAt": "2026-10-23T00:14:32+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -288,15 +288,15 @@
     {
       "id": "exp-005",
       "name": "Freelancer #40781581 - Modern Responsive Business Website Development",
-      "status": "Lead phù hợp, không yêu cầu đặt cọc; đang chờ lưu kỹ năng và hoàn tất hồ sơ",
+      "status": "Đã điền hồ sơ nghề nghiệp; chờ ảnh đại diện và địa chỉ thật để lưu",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Lưu bốn kỹ năng đã chọn, xác minh email/cập nhật hồ sơ theo luồng nền tảng, sau đó gửi chào giá 900 INR/giờ bằng tiếng Anh.",
+      "nextAction": "Nhận ảnh đại diện và thành phố/quốc gia từ người dùng, lưu hồ sơ, rồi gửi chào giá 900 INR/giờ bằng tiếng Anh.",
       "proposedBid": "900 INR/giờ",
       "proposalDraft": "Hello, I can build your responsive business website with React and a maintainable backend or CMS, covering Home, About, Services, Gallery, Testimonials, Contact with Google Maps, basic SEO, performance and security hardening, deployment, handover documentation, and two weeks of post-launch support. I’ll start with responsive mockups for approval, then deliver staged builds you can review. My proposed rate is ₹900/hour. Before I estimate total hours, please share your logo, preferred references, service copy, photos, domain and hosting status, and whether you require Java/Spring Boot specifically or are open to a leaner stack.",
       "market": "Ấn Độ / quốc tế",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-23T00:07:39+07:00"
+      "updatedAt": "2026-10-23T00:14:32+07:00"
     }
   ]
 }
