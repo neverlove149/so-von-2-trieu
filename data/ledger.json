@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "projectName": "Sổ vốn 2 triệu",
+    "initialCapital": 2000000,
+    "currency": "VND",
+    "startedAt": "2026-10-22",
+    "updatedAt": "2026-10-22",
+    "dataPolicy": "Chỉ ghi số thực. Ngày không phát sinh vẫn ghi chi phí 0 và doanh thu 0."
+  },
+  "entries": [
+    {
+      "id": "2026-10-22-001",
+      "date": "2026-10-22",
+      "activity": "Dựng web theo dõi vốn, chi phí, doanh thu và số dư",
+      "channel": "Hạ tầng",
+      "status": "Hoàn tất",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "Mã nguồn và web chạy trên máy",
+      "note": "Ngày đầu chưa phát sinh chi phí hoặc doanh thu."
+    },
+    {
+      "id": "2026-10-22-002",
+      "date": "2026-10-22",
+      "activity": "Xác định hướng thử nghiệm: dịch vụ dashboard dòng tiền cho hộ kinh doanh",
+      "channel": "Sản phẩm",
+      "status": "Đang chuẩn bị",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "Hồ sơ thử nghiệm trong sổ",
+      "note": "Chưa đăng bán vì chưa có kênh bán hàng và nhận thanh toán."
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-001",
+      "name": "Dashboard dòng tiền gọn cho hộ kinh doanh",
+      "status": "Đang chuẩn bị",
+      "spent": 0,
+      "revenue": 0,
+      "nextAction": "Kết nối một kênh bán hàng và nhận thanh toán để đăng gói dịch vụ thật.",
+      "updatedAt": "2026-10-22"
+    }
+  ]
+}

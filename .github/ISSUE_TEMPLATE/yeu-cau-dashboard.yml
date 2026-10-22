@@ -1,0 +1,52 @@
+name: Yêu cầu dashboard dòng tiền
+description: Gửi mô tả ban đầu để nhận bản nháp dashboard 299.000đ
+title: "[Yêu cầu] Dashboard dòng tiền cho "
+labels:
+  - khach-hang
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn đã quan tâm. Chỉ cần mô tả cấu trúc sổ, chưa cần đăng dữ liệu tài chính hoặc thông tin nhạy cảm lên đây.
+  - type: input
+    id: business
+    attributes:
+      label: Loại hình kinh doanh
+      description: Ví dụ: quán cà phê, cửa hàng online, dịch vụ cá nhân.
+      placeholder: Cửa hàng...
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Bạn đang ghi sổ bằng gì?
+      options:
+        - Excel
+        - Google Sheets
+        - CSV từ phần mềm khác
+        - Sổ giấy
+        - Khác
+    validations:
+      required: true
+  - type: input
+    id: rows
+    attributes:
+      label: Khoảng bao nhiêu dòng dữ liệu?
+      placeholder: Ví dụ: 150 dòng
+    validations:
+      required: true
+  - type: textarea
+    id: needs
+    attributes:
+      label: Bạn muốn xem những chỉ số nào?
+      description: Không đưa số tài khoản, số điện thoại, email hoặc dữ liệu tài chính thật vào biểu mẫu công khai này.
+      placeholder: Ví dụ: doanh thu ngày, chi phí, lãi lỗ, số dư...
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Xác nhận phạm vi
+      options:
+        - label: Tôi đã xem demo và phạm vi gói 299.000đ.
+          required: true

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#116c4f" />
+    <meta name="description" content="Sổ theo dõi vốn 2 triệu với chi phí, doanh thu và lãi lỗ thực tế theo ngày." />
+    <title>Sổ vốn 2 triệu</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Chuyển đến nội dung chính</a>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand" aria-label="Sổ vốn 2 triệu">
+          <span class="brand__mark" aria-hidden="true">2M</span>
+          <span class="brand__name">Sổ vốn 2 triệu</span>
+        </div>
+        <div class="topbar__actions">
+          <a class="sales-link" href="dich-vu.html">
+            <i data-lucide="badge-dollar-sign" aria-hidden="true"></i>
+            <span>Dịch vụ 299k</span>
+          </a>
+          <span class="sync-state" id="sync-state" role="status" aria-live="polite">
+            <span class="sync-state__dot" aria-hidden="true"></span>
+            <span id="sync-label">Đang kết nối</span>
+          </span>
+          <button class="icon-button" id="refresh-button" type="button" aria-label="Làm mới dữ liệu" title="Làm mới dữ liệu">
+            <i data-lucide="refresh-cw" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="shell">
+      <section class="page-heading" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">NHẬT KÝ THỰC CHIẾN</p>
+          <h1 id="page-title">Dòng tiền thực, cập nhật theo ngày</h1>
+        </div>
+        <div class="as-of">
+          <span>Cập nhật gần nhất</span>
+          <strong id="updated-at">--</strong>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Tổng quan tài chính">
+        <article class="metric metric--capital">
+          <div class="metric__label"><i data-lucide="wallet-cards" aria-hidden="true"></i>Vốn ban đầu</div>
+          <strong id="initial-capital">0 đ</strong>
+        </article>
+        <article class="metric">
+          <div class="metric__label"><i data-lucide="arrow-down-to-line" aria-hidden="true"></i>Tổng chi</div>
+          <strong id="total-cost">0 đ</strong>
+        </article>
+        <article class="metric">
+          <div class="metric__label"><i data-lucide="arrow-up-from-line" aria-hidden="true"></i>Tổng thu</div>
+          <strong id="total-revenue">0 đ</strong>
+        </article>
+        <article class="metric" id="profit-card">
+          <div class="metric__label"><i data-lucide="circle-dollar-sign" aria-hidden="true"></i>Lãi/lỗ</div>
+          <strong id="net-profit">0 đ</strong>
+        </article>
+        <article class="metric metric--balance">
+          <div class="metric__label"><i data-lucide="landmark" aria-hidden="true"></i>Số dư</div>
+          <strong id="balance">0 đ</strong>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="panel panel--chart" aria-labelledby="chart-title">
+          <div class="panel__header">
+            <div>
+              <p class="section-kicker">DÒNG TIỀN</p>
+              <h2 id="chart-title">Số dư theo ngày</h2>
+            </div>
+            <span class="unit-label">VND</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="balance-chart" aria-label="Biểu đồ số dư theo ngày" role="img"></canvas>
+          </div>
+        </article>
+
+        <aside class="panel panel--experiment" aria-labelledby="experiment-title">
+          <div class="panel__header">
+            <div>
+              <p class="section-kicker">ĐANG THỬ NGHIỆM</p>
+              <h2 id="experiment-title">Hướng tạo doanh thu</h2>
+            </div>
+            <span class="count-pill" id="experiment-count">0</span>
+          </div>
+          <div id="experiment-list" class="experiment-list"></div>
+        </aside>
+      </section>
+
+      <section class="ledger" aria-labelledby="ledger-title">
+        <div class="ledger__header">
+          <div>
+            <p class="section-kicker">SỔ HẰNG NGÀY</p>
+            <h2 id="ledger-title">Đã làm gì, tốn bao nhiêu, thu bao nhiêu</h2>
+          </div>
+          <div class="segmented" role="group" aria-label="Lọc giao dịch">
+            <button class="segmented__button is-active" type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+            <button class="segmented__button" type="button" data-filter="income" aria-pressed="false">Có thu</button>
+            <button class="segmented__button" type="button" data-filter="expense" aria-pressed="false">Có chi</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ngày</th>
+                <th>Việc đã làm</th>
+                <th>Kênh</th>
+                <th>Trạng thái</th>
+                <th class="number">Chi phí</th>
+                <th class="number">Doanh thu</th>
+                <th class="number">Lãi/lỗ</th>
+                <th class="number">Số dư</th>
+                <th>Bằng chứng</th>
+              </tr>
+            </thead>
+            <tbody id="ledger-body"></tbody>
+          </table>
+          <div class="empty-state" id="empty-state" hidden>
+            <i data-lucide="search-x" aria-hidden="true"></i>
+            <p>Không có dòng nào phù hợp với bộ lọc.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="data-policy">
+        <i data-lucide="shield-check" aria-hidden="true"></i>
+        <p id="data-policy">Chỉ ghi số thực.</p>
+      </footer>
+    </main>
+  </body>
+</html>
