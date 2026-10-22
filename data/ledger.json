@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-22T22:11:57+07:00",
+    "updatedAt": "2026-10-22T22:54:35+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,43 +15,43 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-22T22:11:57+07:00",
-      "totalCostUsd": 22.435871,
-      "totalCostVnd": 579893,
+      "lastMeasuredAt": "2026-10-22T22:54:35+07:00",
+      "totalCostUsd": 32.022956,
+      "totalCostVnd": 827688,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 250,
-          "inputTokens": 32396057,
-          "cachedInputTokens": 30886656,
+          "responses": 292,
+          "inputTokens": 37998357,
+          "cachedInputTokens": 34653184,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 148379,
-          "reasoningOutputTokens": 51138,
-          "uncachedInputTokens": 1509401,
+          "outputTokens": 169917,
+          "reasoningOutputTokens": 58967,
+          "uncachedInputTokens": 3345173,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 21.359846
+          "costUsd": 30.640306
         },
         {
           "model": "gpt-6-sol",
-          "responses": 4,
-          "inputTokens": 716774,
-          "cachedInputTokens": 215424,
+          "responses": 20,
+          "inputTokens": 1462109,
+          "cachedInputTokens": 888704,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 3024,
-          "reasoningOutputTokens": 612,
-          "uncachedInputTokens": 501350,
+          "outputTokens": 5810,
+          "reasoningOutputTokens": 1146,
+          "uncachedInputTokens": 573405,
           "ratesUsdPerMillionTokens": {
             "input": 2,
             "cachedInput": 0.2,
             "cacheWrite": 2.5,
             "output": 10
           },
-          "costUsd": 1.076025
+          "costUsd": 1.382651
         }
       ]
     }
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-22T22:11:57+07:00",
+      "timestamp": "2026-10-22T22:54:35+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 579893,
+      "cost": 827688,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "22.435871 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "32.022956 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -191,6 +191,21 @@
       "revenue": 0,
       "evidence": "Mã nguồn, token log và lịch sử Git",
       "note": "Dòng API lũy kế là dòng duy nhất mang chi phí Codex; các mốc công việc còn lại giữ chi phí 0 để không cộng trùng."
+    },
+    {
+      "id": "2026-10-22-009",
+      "date": "2026-10-22",
+      "timestamp": "2026-10-22T22:54:35+07:00",
+      "activity": "Đối chiếu 17 coding bounty trên bảng thưởng Algora với trạng thái GitHub hiện tại",
+      "channel": "Algora / GitHub Issues",
+      "market": "Quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "lead-screening",
+      "status": "Chưa có ứng viên đủ xác suất hoàn tất và nhận tiền trước 25/10",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://algora.io/aqualinkorg/bounties?status=open",
+      "note": "Các mục đã đóng bị loại; các mục còn mở có 13-84 bình luận, đã được giao, đã có nhiều bài nộp, hoặc phạm vi quá lớn. Không tạo PR trùng và không ghi doanh thu khi chưa có bằng chứng thanh toán."
     }
   ],
   "experiments": [
@@ -208,24 +223,24 @@
     {
       "id": "exp-002",
       "name": "Coding bounty có tiền thưởng xác minh được",
-      "status": "Chưa có cơ hội đạt chuẩn",
+      "status": "Đã đối chiếu 17 ứng viên; chưa có ứng viên đạt chuẩn",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Chỉ nhận issue có tiền đã được cấp, tiêu chí nghiệm thu rõ và phương thức thanh toán dùng được tại Việt Nam.",
+      "nextAction": "Tiếp tục quét mỗi giờ; chỉ nhận bounty mới có tiền cố định, tiêu chí nghiệm thu rõ, chưa có bài nộp cạnh tranh và hoàn tất được trước 25/10.",
       "market": "Quốc tế",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-22T21:20:33+07:00"
+      "updatedAt": "2026-10-22T22:54:35+07:00"
     },
     {
       "id": "exp-003",
       "name": "vLance #94649 - Excel bán hàng, tồn kho và công nợ",
-      "status": "Sẵn sàng chào giá",
+      "status": "Sẵn sàng chào giá, đang chờ đăng nhập vLance",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Đăng nhập vLance, gửi chào giá 1.200.000đ kèm file mẫu và cam kết bản nháp trong 48 giờ.",
+      "nextAction": "Ngay khi người dùng đăng nhập vLance trên máy này, gửi chào giá 1.200.000đ kèm file mẫu và cam kết bản nháp trong 48 giờ.",
       "market": "Việt Nam",
       "language": "Tiếng Việt",
-      "updatedAt": "2026-10-22T21:36:01+07:00"
+      "updatedAt": "2026-10-22T22:54:35+07:00"
     }
   ]
 }
