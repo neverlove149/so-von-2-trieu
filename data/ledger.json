@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T00:22:13+07:00",
+    "updatedAt": "2026-10-23T00:36:21+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,43 +15,43 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-23T00:11:50+07:00",
-      "totalCostUsd": 41.404884,
-      "totalCostVnd": 1070180,
+      "lastMeasuredAt": "2026-10-23T00:36:05+07:00",
+      "totalCostUsd": 44.709076,
+      "totalCostVnd": 1155582,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 376,
-          "inputTokens": 49484027,
-          "cachedInputTokens": 45157120,
+          "responses": 415,
+          "inputTokens": 55427533,
+          "cachedInputTokens": 50956800,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 198501,
-          "reasoningOutputTokens": 71988,
-          "uncachedInputTokens": 4326907,
+          "outputTokens": 209703,
+          "reasoningOutputTokens": 77145,
+          "uncachedInputTokens": 4470733,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 39.340496
+          "costUsd": 42.459712
         },
         {
           "model": "gpt-6-sol",
-          "responses": 30,
-          "inputTokens": 2549913,
-          "cachedInputTokens": 1733632,
+          "responses": 35,
+          "inputTokens": 3360025,
+          "cachedInputTokens": 2539648,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 8510,
-          "reasoningOutputTokens": 2083,
-          "uncachedInputTokens": 816281,
+          "outputTokens": 10068,
+          "reasoningOutputTokens": 2561,
+          "uncachedInputTokens": 820377,
           "ratesUsdPerMillionTokens": {
             "input": 2,
             "cachedInput": 0.2,
             "cacheWrite": 2.5,
             "output": 10
           },
-          "costUsd": 2.064388
+          "costUsd": 2.249364
         }
       ]
     }
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-23T00:11:50+07:00",
+      "timestamp": "2026-10-23T00:36:05+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 1070180,
+      "cost": 1155582,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "41.404884 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "44.709076 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -231,11 +231,26 @@
       "market": "Ấn Độ / quốc tế",
       "language": "Tiếng Anh",
       "kind": "lead",
-      "status": "Đã xác minh; đang hoàn tất hồ sơ trước khi chào giá",
+      "status": "Dự án đã bị xóa trước khi gửi chào giá",
       "cost": 0,
       "revenue": 0,
       "evidence": "https://www.freelancer.com/projects/graphic-design/Modern-Responsive-Business-Website-40781581/details",
-      "note": "Project ID 40781581; khách ở New Delhi, India; ngân sách 750-1.250 INR/giờ; thanh toán và đặt cọc đã xác minh. Đã chọn sẵn Website Design, HTML, React.js và Web Development nhưng chưa bấm Next để lưu hồ sơ."
+      "note": "Project ID 40781581; Freelancer trả về 'The project has been deleted' khi bấm Place Bid. Không có bid được tạo, không mất phí và không ghi doanh thu."
+    },
+    {
+      "id": "2026-10-23-002",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T00:36:21+07:00",
+      "activity": "Điền sẵn chào giá sửa lỗi nhỏ cho ứng dụng PHP/Laravel hiện có",
+      "channel": "Freelancer.com",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "lead",
+      "status": "Chào giá đã điền; chờ xác nhận gửi",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.freelancer.com/projects/php/PHP-Laravel-Developer-Needed-for-40777869/details",
+      "note": "Project ID 40777869; khách ở Ahmadabad, India; ngân sách yêu cầu 1.000 INR cố định, thời hạn 2 ngày; thanh toán và đặt cọc đã xác minh. Đã điền 1.000 INR/2 ngày, không chọn nâng cấp trả phí. Phí nền tảng hiển thị 250 INR nếu được nhận việc."
     }
   ],
   "experiments": [
@@ -288,15 +303,28 @@
     {
       "id": "exp-005",
       "name": "Freelancer #40781581 - Modern Responsive Business Website Development",
-      "status": "Hồ sơ đã hoàn tất; chào giá đã điền và chờ xác nhận gửi",
+      "status": "Đã loại: dự án bị xóa trước khi gửi chào giá",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Sau khi người dùng xác nhận, bấm Place Bid để gửi mức 900 INR/giờ, giới hạn 40 giờ/tuần; không mua nâng cấp trả phí.",
+      "nextAction": "Không thao tác thêm; chuyển sang lead Freelancer còn mở và không yêu cầu nạp tiền.",
       "proposedBid": "900 INR/giờ",
       "proposalDraft": "Hello, I can build your responsive business website with React and a maintainable backend or CMS, covering Home, About, Services, Gallery, Testimonials, Contact with Google Maps, basic SEO, performance and security hardening, deployment, handover documentation, and two weeks of post-launch support. I’ll start with responsive mockups for approval, then deliver staged builds you can review. My proposed rate is ₹900/hour. Before I estimate total hours, please share your logo, preferred references, service copy, photos, domain and hosting status, and whether you require Java/Spring Boot specifically or are open to a leaner stack.",
       "market": "Ấn Độ / quốc tế",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-23T00:22:13+07:00"
+      "updatedAt": "2026-10-23T00:36:21+07:00"
+    },
+    {
+      "id": "exp-006",
+      "name": "Freelancer #40777869 - Minor PHP/Laravel Website Fixes",
+      "status": "Chào giá đã điền; chờ xác nhận gửi",
+      "spent": 0,
+      "revenue": 0,
+      "nextAction": "Sau khi người dùng xác nhận, bấm Place Bid để gửi mức 1.000 INR cố định, hoàn thành trong 2 ngày; không mua nâng cấp trả phí.",
+      "proposedBid": "1.000 INR cố định; 2 ngày; thực nhận hiển thị 750 INR sau phí nền tảng nếu được nhận việc",
+      "proposalDraft": "I can review and fix the stated Laravel issues within 2 days. I’ll start by reproducing each bug, then patch the relevant PHP/Blade, JavaScript/CSS, or MySQL code and test the affected flows for regressions. The ₹1,000 fixed budget works for the stated minor scope. Please share the bug list, Laravel/PHP versions, and repository or staging access after award. If anything falls outside the minor scope, I’ll flag it before making extra changes.",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "updatedAt": "2026-10-23T00:36:21+07:00"
     }
   ]
 }
