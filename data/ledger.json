@@ -40,6 +40,17 @@
       "revenue": 0,
       "evidence": "https://neverlove149.github.io/so-von-2-trieu/dich-vu.html",
       "note": "Trang bán và form nhận yêu cầu đã công khai. Chưa có đơn hàng hoặc doanh thu."
+    },
+    {
+      "id": "2026-10-22-004",
+      "date": "2026-10-22",
+      "activity": "Đưa gói dịch vụ lên hồ sơ GitHub để tăng điểm tiếp cận miễn phí",
+      "channel": "GitHub profile",
+      "status": "Đã công khai",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://github.com/neverlove149",
+      "note": "Hồ sơ dẫn trực tiếp đến demo, trang dịch vụ và form yêu cầu. Chưa có lead hoặc doanh thu."
     }
   ],
   "experiments": [
@@ -49,7 +60,7 @@
       "status": "Đã đăng bán",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Tiếp cận khách hàng trực tiếp và theo dõi yêu cầu mới; kết nối kênh nhận thanh toán khi có khách chốt.",
+      "nextAction": "Theo dõi yêu cầu mới mỗi giờ; cần một kênh nhắn khách và một phương thức nhận thanh toán để chủ động chốt đơn trước 25/10.",
       "updatedAt": "2026-10-22"
     }
   ]
