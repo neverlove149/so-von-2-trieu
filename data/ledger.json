@@ -29,16 +29,27 @@
       "revenue": 0,
       "evidence": "Hồ sơ thử nghiệm trong sổ",
       "note": "Chưa đăng bán vì chưa có kênh bán hàng và nhận thanh toán."
+    },
+    {
+      "id": "2026-10-22-003",
+      "date": "2026-10-22",
+      "activity": "Đóng gói và đăng bán dịch vụ dashboard dòng tiền giá 299.000đ",
+      "channel": "GitHub Pages",
+      "status": "Đã đăng bán",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://neverlove149.github.io/so-von-2-trieu/dich-vu.html",
+      "note": "Trang bán và form nhận yêu cầu đã công khai. Chưa có đơn hàng hoặc doanh thu."
     }
   ],
   "experiments": [
     {
       "id": "exp-001",
       "name": "Dashboard dòng tiền gọn cho hộ kinh doanh",
-      "status": "Đang chuẩn bị",
+      "status": "Đã đăng bán",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Kết nối một kênh bán hàng và nhận thanh toán để đăng gói dịch vụ thật.",
+      "nextAction": "Tiếp cận khách hàng trực tiếp và theo dõi yêu cầu mới; kết nối kênh nhận thanh toán khi có khách chốt.",
       "updatedAt": "2026-10-22"
     }
   ]
