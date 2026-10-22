@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T01:24:00+07:00",
+    "updatedAt": "2026-10-23T01:38:24+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,43 +15,43 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-22T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-23T01:23:59+07:00",
-      "totalCostUsd": 48.893085,
-      "totalCostVnd": 1263725,
+      "lastMeasuredAt": "2026-10-23T01:38:24+07:00",
+      "totalCostUsd": 49.56687,
+      "totalCostVnd": 1281140,
       "models": [
         {
           "model": "gpt-5.6-sol",
-          "responses": 477,
-          "inputTokens": 63984066,
-          "cachedInputTokens": 59398784,
+          "responses": 480,
+          "inputTokens": 64574189,
+          "cachedInputTokens": 59986944,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 227154,
-          "reasoningOutputTokens": 83284,
-          "uncachedInputTokens": 4585282,
+          "outputTokens": 228827,
+          "reasoningOutputTokens": 83778,
+          "uncachedInputTokens": 4587245,
           "ratesUsdPerMillionTokens": {
             "input": 4,
             "cachedInput": 0.4,
             "cacheWrite": 5,
             "output": 20
           },
-          "costUsd": 46.643722
+          "costUsd": 46.920298
         },
         {
           "model": "gpt-6-sol",
-          "responses": 35,
-          "inputTokens": 3360025,
-          "cachedInputTokens": 2539648,
+          "responses": 36,
+          "inputTokens": 3560246,
+          "cachedInputTokens": 2543872,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 10068,
-          "reasoningOutputTokens": 2561,
-          "uncachedInputTokens": 820377,
+          "outputTokens": 10505,
+          "reasoningOutputTokens": 2638,
+          "uncachedInputTokens": 1016374,
           "ratesUsdPerMillionTokens": {
             "input": 2,
             "cachedInput": 0.2,
             "cacheWrite": 2.5,
             "output": 10
           },
-          "costUsd": 2.249364
+          "costUsd": 2.646572
         }
       ]
     }
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-23T01:23:59+07:00",
+      "timestamp": "2026-10-23T01:38:24+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 1263725,
+      "cost": 1281140,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "48.893085 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "49.566870 USD, tỷ giá 25.846,704 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
