@@ -51,6 +51,17 @@
       "revenue": 0,
       "evidence": "https://github.com/neverlove149",
       "note": "Hồ sơ dẫn trực tiếp đến demo, trang dịch vụ và form yêu cầu. Chưa có lead hoặc doanh thu."
+    },
+    {
+      "id": "2026-10-22-005",
+      "date": "2026-10-22",
+      "activity": "Rà soát các coding bounty công khai để tìm nguồn thu thứ hai",
+      "channel": "GitHub Issues",
+      "status": "Đã loại các cơ hội chưa đủ bằng chứng",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://github.com/amiller/bounty-arcade/issues/1",
+      "note": "Issue mẫu ghi rõ chưa được cấp vốn; các kết quả khác là test hoặc trả token chưa xác minh. Không nhận việc khi chưa có cam kết trả tiền rõ ràng."
     }
   ],
   "experiments": [
@@ -61,6 +72,15 @@
       "spent": 0,
       "revenue": 0,
       "nextAction": "Theo dõi yêu cầu mới mỗi giờ; cần một kênh nhắn khách và một phương thức nhận thanh toán để chủ động chốt đơn trước 25/10.",
+      "updatedAt": "2026-10-22"
+    },
+    {
+      "id": "exp-002",
+      "name": "Coding bounty có tiền thưởng xác minh được",
+      "status": "Chưa có cơ hội đạt chuẩn",
+      "spent": 0,
+      "revenue": 0,
+      "nextAction": "Chỉ nhận issue có tiền đã được cấp, tiêu chí nghiệm thu rõ và phương thức thanh toán dùng được tại Việt Nam.",
       "updatedAt": "2026-10-22"
     }
   ]
