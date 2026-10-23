@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T10:10:11+07:00",
+    "updatedAt": "2026-10-23T10:23:15+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,9 +15,9 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-23T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-23T10:10:11+07:00",
-      "totalCostUsd": 69.369096,
-      "totalCostVnd": 1791884,
+      "lastMeasuredAt": "2026-10-23T10:23:15+07:00",
+      "totalCostUsd": 70.126172,
+      "totalCostVnd": 1811440,
       "models": [
         {
           "model": "gpt-5.6-sol",
@@ -38,20 +38,20 @@
         },
         {
           "model": "gpt-6-sol",
-          "responses": 475,
-          "inputTokens": 69717967,
-          "cachedInputTokens": 65550720,
+          "responses": 496,
+          "inputTokens": 72658629,
+          "cachedInputTokens": 68436352,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 100416,
-          "reasoningOutputTokens": 31667,
-          "uncachedInputTokens": 4167247,
+          "outputTokens": 107405,
+          "reasoningOutputTokens": 33375,
+          "uncachedInputTokens": 4222277,
           "ratesUsdPerMillionTokens": {
             "input": 2,
             "cachedInput": 0.2,
             "cacheWrite": 2.5,
             "output": 10
           },
-          "costUsd": 22.448798
+          "costUsd": 23.205874
         }
       ]
     }
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-23T10:10:11+07:00",
+      "timestamp": "2026-10-23T10:23:15+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 1791884,
+      "cost": 1811440,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "69.369096 USD, tỷ giá 25.831,153 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "70.126172 USD, tỷ giá 25.831,153 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
@@ -311,6 +311,21 @@
       "revenue": 0,
       "evidence": "https://www.freelancer.com/projects/data-visualization/One-page-dashboard-for-one/details",
       "note": "Project ID 40781897; còn mở 7 ngày; khách ở Ấn Độ, đã xác minh thanh toán và đặt cọc. Yêu cầu chào trọn gói 20.000 INR; bản nháp 7 ngày gồm hai mốc 8.000 và 12.000 INR. Nền tảng hiển thị phí 2.000 INR nếu được nhận việc. Chưa gửi chào giá, chưa phát sinh doanh thu hoặc phí."
+    },
+    {
+      "id": "2026-10-23-007",
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T10:22:57+07:00",
+      "activity": "Gửi chào giá dashboard một trang từ một API trên Freelancer",
+      "channel": "Freelancer.com",
+      "market": "Ấn Độ / quốc tế",
+      "language": "Tiếng Anh",
+      "kind": "bid-submitted",
+      "status": "Đã gửi thành công; chờ khách phản hồi",
+      "cost": 0,
+      "revenue": 0,
+      "evidence": "https://www.freelancer.com/projects/data-visualization/One-page-dashboard-for-one/proposals?bidCreated=true",
+      "note": "Freelancer hiển thị Your Proposal, bid ID 497283636, mức chào 20.000 INR trong 7 ngày; hai mốc đề xuất 8.000 và 12.000 INR. Xếp hạng hiển thị 85/85 ngay sau khi gửi. Không mua nâng cấp trả phí; phí nền tảng dự kiến 2.000 INR chỉ phát sinh nếu được nhận việc."
     }
   ],
   "experiments": [
@@ -402,15 +417,15 @@
     {
       "id": "exp-008",
       "name": "Freelancer #40781897 - One-page dashboard for one sales or analytics API",
-      "status": "Đã điền bản nháp; chờ xác nhận ngay trước khi gửi bid",
+      "status": "Đã gửi chào giá; chờ khách phản hồi",
       "spent": 0,
       "revenue": 0,
-      "nextAction": "Sau khi người dùng xác nhận gửi bid cụ thể, bấm Place Bid và kiểm tra thông báo thành công; sau đó theo dõi tin nhắn và quyết định trao việc.",
+      "nextAction": "Theo dõi tin nhắn và trạng thái trao việc; chỉ ghi doanh thu hoặc phí nền tảng khi có bằng chứng phát sinh.",
       "proposedBid": "20.000 INR cố định; 7 ngày; hai mốc 8.000/12.000 INR; thực nhận hiển thị 18.000 INR sau phí nền tảng nếu được nhận việc",
       "proposalDraft": "Hello, I can build the single-source dashboard for the full ₹20,000 in 7 days, using React or Streamlit depending on the API you choose. I will connect only one source (Stripe, Shopify, YouTube Analytics, or one CRM), keep its credential server-side in an environment variable, and show about five relevant headline metrics plus the last 30 days of daily data. Milestone 1 (₹8,000): working API connection, chart, and headline numbers. Milestone 2 (₹12,000): date-range filter, daily table, responsive laptop layout, tested refresh flow, and a short run/handover guide. I will not add ads, extra sources, accounts, or mobile apps. Please confirm the selected API and which five metrics you want before work begins; credentials can be provided securely after award.",
       "market": "Ấn Độ / quốc tế",
       "language": "Tiếng Anh",
-      "updatedAt": "2026-10-23T04:12:33+07:00"
+      "updatedAt": "2026-10-23T10:22:57+07:00"
     }
   ]
 }
