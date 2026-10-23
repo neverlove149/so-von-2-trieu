@@ -4,7 +4,7 @@
     "initialCapital": 2000000,
     "currency": "VND",
     "startedAt": "2026-10-22",
-    "updatedAt": "2026-10-23T10:23:15+07:00",
+    "updatedAt": "2026-10-23T10:38:39+07:00",
     "timezone": "Asia/Ho_Chi_Minh",
     "dataPolicy": "Mỗi mốc có thời gian đầy đủ. Lead phải ghi thị trường và ngôn ngữ. Chi phí API được trừ theo token log và giá công khai; số quy đổi được ghi rõ là ước tính cho tới khi có hóa đơn đối soát.",
     "apiAccounting": {
@@ -15,9 +15,9 @@
       "fxSource": "https://open.er-api.com/v6/latest/USD",
       "fxUpdatedAt": "2026-10-23T07:02:31+07:00",
       "fxStatus": "Đã cập nhật từ nguồn tỷ giá",
-      "lastMeasuredAt": "2026-10-23T10:23:15+07:00",
-      "totalCostUsd": 70.126172,
-      "totalCostVnd": 1811440,
+      "lastMeasuredAt": "2026-10-23T10:38:39+07:00",
+      "totalCostUsd": 70.367895,
+      "totalCostVnd": 1817684,
       "models": [
         {
           "model": "gpt-5.6-sol",
@@ -38,20 +38,20 @@
         },
         {
           "model": "gpt-6-sol",
-          "responses": 496,
-          "inputTokens": 72658629,
-          "cachedInputTokens": 68436352,
+          "responses": 509,
+          "inputTokens": 73618966,
+          "cachedInputTokens": 69383936,
           "cacheWriteInputTokens": 0,
-          "outputTokens": 107405,
-          "reasoningOutputTokens": 33375,
-          "uncachedInputTokens": 4222277,
+          "outputTokens": 110075,
+          "reasoningOutputTokens": 34057,
+          "uncachedInputTokens": 4235030,
           "ratesUsdPerMillionTokens": {
             "input": 2,
             "cachedInput": 0.2,
             "cacheWrite": 2.5,
             "output": 10
           },
-          "costUsd": 23.205874
+          "costUsd": 23.447597
         }
       ]
     }
@@ -165,17 +165,17 @@
     {
       "id": "2026-10-22-api-001",
       "date": "2026-10-22",
-      "timestamp": "2026-10-23T10:23:15+07:00",
+      "timestamp": "2026-10-23T10:38:39+07:00",
       "activity": "Hạch toán lũy kế chi phí API Codex theo token usage của thread",
       "channel": "OpenAI API",
       "market": "Không áp dụng",
       "language": "Không áp dụng",
       "kind": "api-cost",
       "status": "Ước tính từ usage, chưa đối soát hóa đơn",
-      "cost": 1811440,
+      "cost": 1817684,
       "revenue": 0,
       "evidence": "https://developers.openai.com/api/docs/pricing",
-      "note": "70.126172 USD, tỷ giá 25.831,153 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
+      "note": "70.367895 USD, tỷ giá 25.831,153 VND/USD. Chi phí được cập nhật lũy kế, không cộng trùng giữa các lần đo."
     },
     {
       "id": "2026-10-22-008",
